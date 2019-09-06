@@ -157,7 +157,9 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="Filenamesep.h" />
     <ClInclude Include="pch.h" />
+    <ClInclude Include="WriteMhd2D.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="CoherentLineDrawingtest.cpp" />
