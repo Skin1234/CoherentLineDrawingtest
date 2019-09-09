@@ -18,10 +18,10 @@
     <ClInclude Include="pch.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="WriteMhd2D.h">
+    <ClInclude Include="..\..\RGB2LAB\RGB2LAB\Filenamesep.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Filenamesep.h">
+    <ClInclude Include="..\..\RGB2LAB\RGB2LAB\writemhd2D.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

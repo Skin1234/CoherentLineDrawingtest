@@ -157,9 +157,9 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="Filenamesep.h" />
+    <ClInclude Include="..\..\RGB2LAB\RGB2LAB\Filenamesep.h" />
+    <ClInclude Include="..\..\RGB2LAB\RGB2LAB\writemhd2D.h" />
     <ClInclude Include="pch.h" />
-    <ClInclude Include="WriteMhd2D.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="CoherentLineDrawingtest.cpp" />

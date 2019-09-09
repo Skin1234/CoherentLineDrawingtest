@@ -91,7 +91,7 @@ public:
 		m_nSize[2] = 1;
 	}
 private:
-	unsigned char* ReadRaw(char *cRawFile)
+	unsigned char* ReadRaw(const char *cRawFile)
 	{
 
 		int nSize, nEleSize;
@@ -136,7 +136,7 @@ private:
 	}
 
 public:
-	void* LoadMHD(char *cMHDFileName, int &ndims, int *dims, MET_ValueEnumType &type, bool bChangeZ=0)
+	void* LoadMHD(const char *cMHDFileName, int &ndims, int *dims, MET_ValueEnumType &type, bool bChangeZ=0)
 	{
 		FILE *fp;
 		fopen_s(&fp, cMHDFileName, "rt");
@@ -210,7 +210,7 @@ public:
 sample:
 WrtieMhd2D("1.mhd", "1.raw", dim, MET_FLOAT);
 */
-inline void WrtieMhd2DHeader(char *cFile, char *cRaw, int *dim, MET_ValueEnumType cType)
+inline void WrtieMhd2DHeader(const char *cFile, const char *cRaw, int *dim, MET_ValueEnumType cType)
 {
 
 	char cMsg[][256]=
@@ -267,7 +267,7 @@ inline void WrtieMhd2DHeader(char *cFile, char *cRaw, int *dim, MET_ValueEnumTyp
 }
 
 
-inline void WrtieMhd2D(char *cFile, char *cRaw, int *dim, MET_ValueEnumType cType, const void *pData)
+inline void WrtieMhd2D(const char *cFile, const char *cRaw, int *dim, MET_ValueEnumType cType, const void *pData)
 {
 	WrtieMhd2DHeader(cFile, cRaw, dim, cType);
 
@@ -312,7 +312,7 @@ inline void WrtieMhd2D(char *cFile, char *cRaw, int *dim, MET_ValueEnumType cTyp
 }
 
 
-inline void WrtieMhd2D(char *cFile, int *dim, MET_ValueEnumType cType, const void *pData)
+inline void WrtieMhd2D(const char *cFile, int *dim, MET_ValueEnumType cType, const void *pData)
 {
 	CFileNameSep sep(cFile);
 	char cRaw[256];
@@ -359,7 +359,7 @@ inline void WrtieMhd2D(char *cFile, int *dim, MET_ValueEnumType cType, const voi
 
 }
 //WrtieMhd2D("some.mhd", 128, 128, MET_DOUBLE, data);
-inline void WrtieMhd2D(char *cFile, int w, int h, MET_ValueEnumType cType, const void *pData)
+inline void WrtieMhd2D(const char *cFile, int w, int h, MET_ValueEnumType cType, const void *pData)
 {
 	int dim[2] = {w, h};
 	WrtieMhd2D(cFile, dim, cType, pData);
